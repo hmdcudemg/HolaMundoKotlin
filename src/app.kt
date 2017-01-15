@@ -3,10 +3,16 @@
  */
 
 fun main(args: Array<String>) {
-    variables()
+    getCadenas()
 }
 
-fun variables() {
+fun getCadenas() {
+    var name = "David Mendez Guardado"
+    var experience = 5
+    println("Hola soy $name y soy desarrollador en Kotlin, Java, etc. desde hace $experience años.")
+}
+
+fun getVariables() {
     println("Hola Mundo")
 
     // De forma sencilla
