@@ -3,7 +3,23 @@
  */
 
 fun main(args: Array<String>) {
-    getCadenas()
+    getValFunc()
+}
+
+fun getValFunc() {
+    val resultadoSum = sumNumeros(5, 5)
+    // Named Arguments en Kotlin
+    val resultadoMult = multNumeros(x = 5, y = 5)
+
+    println("El resultado de suma es: $resultadoSum")
+    println("El resultado de Multiplicacion es: $resultadoMult")
+}
+
+// Esta forma de representar la funcion sirve solo cuando la expresion es de 1 sola linea
+fun multNumeros(x: Int, y: Int): Int = x * y
+
+fun sumNumeros(x: Int, y: Int): Int {
+    return x + y
 }
 
 fun getCadenas() {
