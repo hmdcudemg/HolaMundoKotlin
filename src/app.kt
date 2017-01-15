@@ -3,8 +3,22 @@
  */
 
 fun main(args: Array<String>) {
-    val resultado = getMax(a = 5, b = 8)
-    println("El valor Maximo es: $resultado")
+//    val resultado = getMax(a = 5, b = 8)
+//    println("El valor Maximo es: $resultado")
+
+    valorJusto(78)
+}
+
+// "Unit" sirve para las funciones en java y otros lenguajes seria void.
+fun valorJusto(valor: Int): Unit {
+
+    when (valor) {
+        1 -> println("Opcion 1 del menu")
+        2 -> println("Opcion 2 del menu")
+        in 3..5 -> println("Opcion entre 3 y 5")
+        else -> println("Opcion no encontrada")
+    }
+
 }
 
 fun getMax(a: Int, b: Int): Int {
