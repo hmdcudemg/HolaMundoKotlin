@@ -3,17 +3,45 @@
  */
 
 fun main(args: Array<String>) {
-    getCiclos()
+    getNullables()
+}
+
+fun getNullables() {
+    // El error del millon de dolares NullPointerException
+
+    var a: String? = "Windows" // este siempre sera un string con valor no acepta nulos
+    var b: String? = "Microsoft" // este string si puede tener valores nulos
+    var c: String? = "Apple"
+
+    b = null
+    a = null
+    //c = null
+
+    var d = a?.length
+    println(d)
+
+    var e = if (b == null) 0 else b.length // opcion recomendada en mayoria de los casos
+    println("La longitud de caracteres de b es: $e")
+
+    var f: Int = c!!.length // opcion menos recomendadas ya que puede mandar NullPointerException, asegurarse de que el valor no sea nulo
+    println("La longitud en caracteres de c es: $f")
 }
 
 fun getCiclos() {
     var array: Array<String> = arrayOf("1", "2", "3", "4", "5")
+    println("For sencillo")
     for (i in array.indices) {
         println("El elemento en la posicion $i es: ${array[i]}")
     }
-    println()
+    println("For expecifico")
     for ((indices, valor) in array.withIndex()) {
         println("El elemento en la posicion $indices es: $valor")
+    }
+    println("While")
+    var i = 0
+    while (i < array.size) {
+        println("El valor en $i es: ${array[i]}")
+        i++
     }
 }
 
