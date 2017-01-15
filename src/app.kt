@@ -10,9 +10,16 @@ fun getValFunc() {
     val resultadoSum = sumNumeros(5, 5)
     // Named Arguments en Kotlin
     val resultadoMult = multNumeros(x = 5, y = 5)
+    // Funcion que utiliza valores por defecto
+    val resultadoRest = restNumeros(x = 5)
 
     println("El resultado de suma es: $resultadoSum")
     println("El resultado de Multiplicacion es: $resultadoMult")
+    println("El resultado de Resta es: $resultadoRest")
+}
+
+fun restNumeros(x: Int, y: Int = 0): Int {
+    return x - y
 }
 
 // Esta forma de representar la funcion sirve solo cuando la expresion es de 1 sola linea
