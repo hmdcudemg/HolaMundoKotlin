@@ -3,7 +3,18 @@
  */
 
 fun main(args: Array<String>) {
-    getArreglos()
+    getCiclos()
+}
+
+fun getCiclos() {
+    var array: Array<String> = arrayOf("1", "2", "3", "4", "5")
+    for (i in array.indices) {
+        println("El elemento en la posicion $i es: ${array[i]}")
+    }
+    println()
+    for ((indices, valor) in array.withIndex()) {
+        println("El elemento en la posicion $indices es: $valor")
+    }
 }
 
 fun getArreglos() {
