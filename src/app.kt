@@ -3,7 +3,16 @@
  */
 
 fun main(args: Array<String>) {
-    getValFunc()
+    val resultado = getMax(a = 5, b = 8)
+    println("El valor Maximo es: $resultado")
+}
+
+fun getMax(a: Int, b: Int): Int {
+    if (a > b) {
+        return a
+    } else {
+        return b
+    }
 }
 
 fun getValFunc() {
