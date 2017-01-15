@@ -3,10 +3,18 @@
  */
 
 fun main(args: Array<String>) {
-//    val resultado = getMax(a = 5, b = 8)
-//    println("El valor Maximo es: $resultado")
+    getArreglos()
+}
 
-    valorJusto(78)
+fun getArreglos() {
+    var array: Array<String> = arrayOf("1", "2", "3", "4", "5")
+
+    println(array.get(0))
+    println(array[1])
+
+    var arraySolo = kotlin.arrayOfNulls<String>(10)
+    arraySolo.set(0, "Uno")
+    println(arraySolo.get(0))
 }
 
 // "Unit" sirve para las funciones en java y otros lenguajes seria void.
